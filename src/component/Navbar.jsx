@@ -15,16 +15,18 @@ function Navbar() {
     }, []);
 
     const navLinks = [
-        { name: 'Home', href: '#Home' },
-        { name: 'About', href: '#About' },
-        { name: 'Projects', href: '#Projects' },
-        { name: 'Skills', href: '#Skills' },
-        { name: 'Contact', href: '#Contact' },
+        { name: 'Home', href: '#home' },
+        { name: 'About', href: '#about' },
+        { name: 'Projects', href: '#projects' },
+        { name: 'Skills', href: '#skills' },
+        { name: 'Contact', href: '#contact' },
     ];
 
     return (
         <motion.nav
-            initial={{ duration: 0.5 }}
+            initial={{ y: -100 }}
+            animate={{ y: 0 }}
+            transition={{ duration: 0.5 }}
             className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
                 scrolled
                     ? 'glass shadow-lg shadow-neon-blue/20'
@@ -34,7 +36,7 @@ function Navbar() {
             <div className="container mx-auto px-6 py-4">
                 <div className="flex items-center justify-between">
                     <motion.a
-                        href="#Home"
+                        href="#home"
                         className="text-2xl font-bold gradient-text"
                         whileHover={{ scale: 1.05 }}
                         whileTap={{ scale: 0.95 }}
@@ -49,7 +51,7 @@ function Navbar() {
                                 initial={{ opacity: 0, y: -20 }}
                                 animate={{ opacity: 1, y: 0 }}
                                 transition={{ delay: index * 0.1 }}
-                                className="text-grey-300 hover:text-neon-blue transition-colors relative group"
+                                className="text-gray-300 hover:text-neon-blue transition-colors relative group"
                                 whileHover={{ scale: 1.1 }}
                             >
                                 {link.name}
@@ -57,10 +59,10 @@ function Navbar() {
                             </motion.a>
                         ))}
                         <motion.a
-                            href="#Contact"
+                            href="#contact"
                             whileHover={{ scale: 1.05 }}
                             whileTap={{ scale: 0.95 }}
-                            className="px-6 py-2 bg-gradient-to-r from-neon-blue to-neon-purple rounded-full font-semibold neon-glow hover:from-neon-purple/50 transition-all"
+                            className="px-6 py-2 bg-gradient-to-r from-neon-blue to-neon-purple rounded-full font-semibold neon-glow hover:from-neon-purple hover:to-neon-blue transition-all"
                         >
                             Hire Me
                         </motion.a>
@@ -85,13 +87,13 @@ function Navbar() {
                                     key={link.name}
                                     href={link.href}
                                     onClick={() => setIsOpen(false)}
-                                    className="block py-2 text-grey-300 hover:text-neon-blue transition-colors"
+                                    className="block py-2 text-gray-300 hover:text-neon-blue transition-colors"
                                 >
                                     {link.name}
                                 </a>
                             ))}
                             <a
-                                href="#Contact"
+                                href="#contact"
                                 onClick={() => setIsOpen(false)}
                                 className="block py-2 text-center bg-gradient-to-r from-neon-blue to-neon-purple rounded-full font-semibold"
                             >

@@ -1,9 +1,9 @@
-import { motion } from 'framer-motion'
-import { Heart } from 'lucide-react'
-import { personalInfo } from '../data/portfolioData'
+import { motion } from 'framer-motion';
+import { Heart } from 'lucide-react';
+import { personalInfo } from '../data/portfolioData';
 
 function Footer() {
-  const currentYear = new Date().getFullYear()
+  const currentYear = new Date().getFullYear();
 
   const quickLinks = [
     { name: 'Home', href: '#home' },
@@ -11,7 +11,7 @@ function Footer() {
     { name: 'Projects', href: '#projects' },
     { name: 'Skills', href: '#skills' },
     { name: 'Contact', href: '#contact' }
-  ]
+  ];
 
   return (
     <footer className="relative bg-dark-900 border-t border-gray-800">
@@ -83,23 +83,8 @@ function Footer() {
           </p>
         </div>
       </div>
-
-      {/* Scroll to top button */}
-      <motion.button
-        onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
-        whileHover={{ scale: 1.1 }}
-        whileTap={{ scale: 0.9 }}
-        className="fixed bottom-8 right-8 w-12 h-12 bg-gradient-to-br from-neon-blue to-neon-purple rounded-full flex items-center justify-center neon-glow z-50 cursor-pointer"
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ delay: 1 }}
-      >
-        <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 10l7-7m0 0l7 7m-7-7v18" />
-        </svg>
-      </motion.button>
     </footer>
-  )
+  );
 }
 
-export default Footer  
+export default Footer;
