@@ -5,7 +5,7 @@ import { loadSlim } from "tsparticles-slim";
 
 function ParticleBackground() {
     const particlesInit =useCallback( async engine => {
-        await loadslim(engine)
+        await loadSlim(engine)
     },[])
 
     return(

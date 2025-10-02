@@ -1,29 +1,51 @@
-// Example dummy data – you can customize later
-
 export const about = {
-  title: "About Me",
-  description: "I am a passionate web developer learning React and building projects."
+  intro: "Your introduction text here",
+  highlights: [
+    "Key highlight 1",
+    "Key highlight 2", 
+    "Key highlight 3"
+  ]
 };
 
 export const Achievements = [
-  { title: "First Project", year: 2024 },
-  { title: "Learning React", year: 2025 }
+  { number: "10+", label: "Projects" },
+  { number: "2+", label: "Years Experience" },
+  // ... more achievements
 ];
 
+// Fix skills structure
 export const skills = [
-  { name: "HTML", level: "Advanced" },
-  { name: "CSS", level: "Intermediate" },
-  { name: "JavaScript", level: "Intermediate" },
-  { name: "React", level: "Beginner" }
+  { 
+    name: "React", 
+    level: 90, 
+    icon: "⚛️" // or import actual icon
+  },
+  // ... more skills
 ];
 
+// Fix projects structure  
 export const projects = [
-  { name: "Portfolio Website", link: "https://futuristic-portfolio-noor660.vercel.app", github: "https://github.com/nooruddinsk660-rgb/futuristic-portfolio-noor660" }
+  {
+    title: "Project Name",
+    description: "Project description",
+    techstack: ["React", "Node.js"],
+    features: ["Feature 1", "Feature 2"],
+    image: "/project-image.jpg",
+    gradient: "from-blue-500 to-purple-500",
+    liveLink: "https://example.com",
+    githubLink: "https://github.com/..."
+  },
+  // ... more projects
 ];
-
-export const personalInfo = {
+export const PersonalInfo = [
+{
   name: "Sk Nooruddin",
+  role: "Web Developer",
+  tagline: "Building futuristic web applications",
+  profileImage: "/path/to/your/image.jpg", // Add your image
   email: "your-email@example.com",
   github: "https://github.com/nooruddinsk660-rgb",
-  linkedin: "https://linkedin.com/in/your-linkedin"
-};
+  linkedin: "https://linkedin.com/in/your-profile", 
+  resumeLink: "/path/to/resume.pdf"
+},
+]
