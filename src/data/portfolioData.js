@@ -14,14 +14,27 @@ export const Achievements = [
 ];
 
 // Fix skills structure
-export const skills = [
-  { 
-    name: "React", 
-    level: 90, 
-    icon: "⚛️" // or import actual icon
-  },
-  // ... more skills
-];
+export const skills = {
+    frontend: [
+        { name: "React", icon: "⚛️", level: 90 },
+        { name: "JavaScript", icon: "🟨", level: 85 },
+        { name: "HTML/CSS", icon: "🎨", level: 95 },
+        { name: "Tailwind CSS", icon: "🎐", level: 88 },
+        { name: "TypeScript", icon: "🔷", level: 80 },
+    ],
+    backend: [
+        { name: "Node.js", icon: "🟢", level: 85 },
+        { name: "Express", icon: "⚡", level: 82 },
+        { name: "MongoDB", icon: "🍃", level: 78 },
+        { name: "PostgreSQL", icon: "🐘", level: 75 },
+    ],
+    tools: [
+        { name: "Git", icon: "📦", level: 90 },
+        { name: "VS Code", icon: "💻", level: 95 },
+        { name: "Figma", icon: "🎨", level: 70 },
+        { name: "Postman", icon: "📮", level: 85 },
+    ]
+};
 
 // Fix projects structure  
 export const projects = [
@@ -37,6 +50,18 @@ export const projects = [
   },
   // ... more projects
 ];
+export const personalInfo = [
+{
+  name: "Sk Nooruddin",
+  role: "Web Developer",
+  tagline: "Building futuristic web applications",
+  profileImage: "/path/to/your/image.jpg", // Add your image
+  email: "your-email@example.com",
+  github: "https://github.com/nooruddinsk660-rgb",
+  linkedin: "https://linkedin.com/in/your-profile", 
+  resumeLink: "/path/to/resume.pdf"
+},
+]
 export const PersonalInfo = [
 {
   name: "Sk Nooruddin",
@@ -49,3 +74,4 @@ export const PersonalInfo = [
   resumeLink: "/path/to/resume.pdf"
 },
 ]
+
